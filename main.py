@@ -52,7 +52,7 @@ context = ssl.create_default_context()
 
 with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
     smtp.starttls(context=context)
-    smtp.login(msg['From'], 'jipunrexgtzogkdj')
+    smtp.login(msg['From'], 'password')
     smtp.sendmail(msg['From'], msg['To'], msg.as_string())
     print('Email Send Sucess')
 
